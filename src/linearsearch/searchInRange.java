@@ -3,6 +3,7 @@ package linearsearch;
 public class searchInRange {
     static void main(String[] args) {
         int[] arr = {18,12,-7,3,14,28};
+
         int target = 28;
         System.out.println(linearSearch(arr,target,1,4));
     }
