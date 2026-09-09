@@ -15,6 +15,8 @@ public class SearchIn2Darray {
         int target = 34;
         int[] ans = search(arr,target);// format of return value {row,columns}
         System.out.println(Arrays.toString(ans));
+
+        System.out.println(max(arr));// printing statement of maximum of 2d array
     }
     static int[] search(int[][] arr, int target){
         for (int row = 0; row < arr.length; row++) {
@@ -26,4 +28,21 @@ public class SearchIn2Darray {
         }
         return new int[]{-1,-1};
     }
+//------------------------MAXIMUM IN A 2D ARRAY ----------------------------
+
+
+    static int max(int[][] arr){
+        int max = Integer.MIN_VALUE;
+        for (int[] ints : arr) {
+            for (int element : ints) {
+                if (element > max) {
+                    max = element;
+                }
+            }
+        }
+        return max;
+    }
+
+
+
 }
